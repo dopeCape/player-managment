@@ -21,9 +21,6 @@ cd player-managment
 sudo docker build -t player-managment . && sudo docker run -p 27017:27017 -p 8000:8000 player-managment
 ```
 
-\*\* To run on windows make sure the cmd session has administrative privilege.This might not be required , try running without administrative privilege ,
-if it fails try running it with administrative privileges.
-
 <h1>Windows(with make)</h1>
 
 ```
@@ -37,5 +34,47 @@ make docker
 ```
 git clone https://github.com/dopeCape/player-managment
 cd player-managment
-sudo docker build -t player-managment . && sudo docker run -p 27017:27017 -p 8000:8000 player-managment
+ docker build -t player-managment . &&  docker run -p 27017:27017 -p 8000:8000 player-managment
 ```
+
+\*\* To run on windows make sure the cmd session has administrative privilege.This might not be required , try running without administrative privilege ,
+if it fails try running it with administrative privileges.
+
+<h1>API docs<h1/>
+
+1.  POST : "http://localhost:8000/players"
+    will Return the ID for the player entry
+    Payload ex:
+
+```json
+    {
+    country:"IN",
+    score:80,(should be a positive Int)
+    name:"tejas"
+    }
+
+
+```
+
+2.  PUT : "http://localhost:8000/players/:id"
+    will return the updated Player entry
+    Payload ex:
+
+    ```json
+    {
+    score:90,(should be a positive Int)
+    name:"tejas"
+    }
+    ```
+
+3.  DELETE : "http://localhost:8000/players/:id"
+    will not return any Thing
+
+4.  GET : "http://localhost:8000/players/rank/:val"
+    will return the player at vat'th rank
+
+5.  GET : "http://localhost:8000/players/"
+    will return all the players in descending order
+
+6.  GET : "http://localhost:8000/players/random"
+    will return a random player
