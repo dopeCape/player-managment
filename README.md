@@ -40,7 +40,7 @@ cd player-managment
 \*\* To run on windows make sure the cmd session has administrative privilege.This might not be required , try running without administrative privilege ,
 if it fails try running it with administrative privileges.
 
-<h1>API docs<h1/>
+<h1>API docs</h1>
 
 1.  POST : "http://localhost:8000/players"
     will Return the ID for the player entry
