@@ -6,10 +6,11 @@ following command might take some time depending on your system and network spee
 Its Important that you have your lh:8000 port and lh:27017 port free for server and db to start, if they are not please free them up and try again
 
 <h1>Linux(with make)</h1>
+
 ```
 git clone https://github.com/dopeCape/player-managment
 cd player-managment
-sudo make docker 
+sudo make docker
 ```
 
 <h1>Linux(without make)</h1>
@@ -24,10 +25,11 @@ sudo docker build -t player-managment . && sudo docker run -p 27017:27017 -p 800
 if it fails try running it with administrative privileges.
 
 <h1>Windows(with make)</h1>
+
 ```
 git clone https://github.com/dopeCape/player-managment
 cd player-managment
-make docker 
+make docker
 ```
 
 <h1>Windows(without make)</h1>
